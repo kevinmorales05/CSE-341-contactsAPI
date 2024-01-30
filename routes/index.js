@@ -1,8 +1,8 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-router.get('/', (req, res) => { res.send('Hello world')});
+router.use("/", require("./swagger"));
 
-router.get('/users', require('./users'));
-router.get('/allUsers', require('./allUsers'));
+router.use("/users", require("./users"));
+
 
 module.exports = router;
