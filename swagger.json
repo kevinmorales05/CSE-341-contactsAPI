@@ -8,24 +8,11 @@
   "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https",
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
-    "/": {
-      "get": {
-        "tags": [
-          "Hello World"
-        ],
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/./api-docs": {
+    "/api-docs": {
       "get": {
         "description": "",
         "responses": {
@@ -71,11 +58,6 @@
             "type": "string"
           },
           {
-            "name": "id",
-            "in": "query",
-            "type": "string"
-          },
-          {
             "name": "body",
             "in": "body",
             "schema": {
@@ -116,11 +98,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
-          },
-          {
-            "name": "id",
-            "in": "query",
             "type": "string"
           },
           {
@@ -200,30 +177,6 @@
         "description": "",
         "produces": [
           "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/allUsers/{all}": {
-      "get": {
-        "tags": [
-          "Users"
-        ],
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "all",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
         ],
         "responses": {
           "200": {
